@@ -1,0 +1,110 @@
+[
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "dirname",
+        "kind": 5,
+        "importPath": "FAQ.FAQ",
+        "description": "FAQ.FAQ",
+        "peekOfCode": "dirname = os.path.dirname(__file__)\nprint(f\"Running Dir : {dirname=}\")\nexcel_file = f\"{dirname}\\\\Export.xlsx\"\ndf = pd.read_excel(excel_file, engine=\"openpyxl\")\ntemplate = {\"file_name\": \"FAQ\", \"languages\": \"eng+fas\", \"CHUNK__\": None}\nstate = []\nchunk_raw_size = 6\nperv_faq = \"\"\nfor index_raw, (index, row) in enumerate(df.iterrows()):\n    question = row[\"سوال\"]",
+        "detail": "FAQ.FAQ",
+        "documentation": {}
+    },
+    {
+        "label": "excel_file",
+        "kind": 5,
+        "importPath": "FAQ.FAQ",
+        "description": "FAQ.FAQ",
+        "peekOfCode": "excel_file = f\"{dirname}\\\\Export.xlsx\"\ndf = pd.read_excel(excel_file, engine=\"openpyxl\")\ntemplate = {\"file_name\": \"FAQ\", \"languages\": \"eng+fas\", \"CHUNK__\": None}\nstate = []\nchunk_raw_size = 6\nperv_faq = \"\"\nfor index_raw, (index, row) in enumerate(df.iterrows()):\n    question = row[\"سوال\"]\n    answer = row[\"پاسخ\"]\n    perv_faq += f\"\\nQuestion : {question} -> Answer : {answer}\" + \"-\" * 15",
+        "detail": "FAQ.FAQ",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "FAQ.FAQ",
+        "description": "FAQ.FAQ",
+        "peekOfCode": "df = pd.read_excel(excel_file, engine=\"openpyxl\")\ntemplate = {\"file_name\": \"FAQ\", \"languages\": \"eng+fas\", \"CHUNK__\": None}\nstate = []\nchunk_raw_size = 6\nperv_faq = \"\"\nfor index_raw, (index, row) in enumerate(df.iterrows()):\n    question = row[\"سوال\"]\n    answer = row[\"پاسخ\"]\n    perv_faq += f\"\\nQuestion : {question} -> Answer : {answer}\" + \"-\" * 15\n    if ((index_raw + 1) % chunk_raw_size) == 0:",
+        "detail": "FAQ.FAQ",
+        "documentation": {}
+    },
+    {
+        "label": "template",
+        "kind": 5,
+        "importPath": "FAQ.FAQ",
+        "description": "FAQ.FAQ",
+        "peekOfCode": "template = {\"file_name\": \"FAQ\", \"languages\": \"eng+fas\", \"CHUNK__\": None}\nstate = []\nchunk_raw_size = 6\nperv_faq = \"\"\nfor index_raw, (index, row) in enumerate(df.iterrows()):\n    question = row[\"سوال\"]\n    answer = row[\"پاسخ\"]\n    perv_faq += f\"\\nQuestion : {question} -> Answer : {answer}\" + \"-\" * 15\n    if ((index_raw + 1) % chunk_raw_size) == 0:\n        state.append(perv_faq.strip())",
+        "detail": "FAQ.FAQ",
+        "documentation": {}
+    },
+    {
+        "label": "state",
+        "kind": 5,
+        "importPath": "FAQ.FAQ",
+        "description": "FAQ.FAQ",
+        "peekOfCode": "state = []\nchunk_raw_size = 6\nperv_faq = \"\"\nfor index_raw, (index, row) in enumerate(df.iterrows()):\n    question = row[\"سوال\"]\n    answer = row[\"پاسخ\"]\n    perv_faq += f\"\\nQuestion : {question} -> Answer : {answer}\" + \"-\" * 15\n    if ((index_raw + 1) % chunk_raw_size) == 0:\n        state.append(perv_faq.strip())\n        perv_faq = \"\"",
+        "detail": "FAQ.FAQ",
+        "documentation": {}
+    },
+    {
+        "label": "chunk_raw_size",
+        "kind": 5,
+        "importPath": "FAQ.FAQ",
+        "description": "FAQ.FAQ",
+        "peekOfCode": "chunk_raw_size = 6\nperv_faq = \"\"\nfor index_raw, (index, row) in enumerate(df.iterrows()):\n    question = row[\"سوال\"]\n    answer = row[\"پاسخ\"]\n    perv_faq += f\"\\nQuestion : {question} -> Answer : {answer}\" + \"-\" * 15\n    if ((index_raw + 1) % chunk_raw_size) == 0:\n        state.append(perv_faq.strip())\n        perv_faq = \"\"\ntemplate[\"CHUNK__\"] = list(set(state))",
+        "detail": "FAQ.FAQ",
+        "documentation": {}
+    },
+    {
+        "label": "perv_faq",
+        "kind": 5,
+        "importPath": "FAQ.FAQ",
+        "description": "FAQ.FAQ",
+        "peekOfCode": "perv_faq = \"\"\nfor index_raw, (index, row) in enumerate(df.iterrows()):\n    question = row[\"سوال\"]\n    answer = row[\"پاسخ\"]\n    perv_faq += f\"\\nQuestion : {question} -> Answer : {answer}\" + \"-\" * 15\n    if ((index_raw + 1) % chunk_raw_size) == 0:\n        state.append(perv_faq.strip())\n        perv_faq = \"\"\ntemplate[\"CHUNK__\"] = list(set(state))\njson_data = json.dumps(template, indent=4, ensure_ascii=False)",
+        "detail": "FAQ.FAQ",
+        "documentation": {}
+    },
+    {
+        "label": "template[\"CHUNK__\"]",
+        "kind": 5,
+        "importPath": "FAQ.FAQ",
+        "description": "FAQ.FAQ",
+        "peekOfCode": "template[\"CHUNK__\"] = list(set(state))\njson_data = json.dumps(template, indent=4, ensure_ascii=False)\nwith open(\"faqs.json\", \"w\", encoding=\"utf-8\") as f:\n    f.write(json_data)\nprint(\"Successful\")",
+        "detail": "FAQ.FAQ",
+        "documentation": {}
+    },
+    {
+        "label": "json_data",
+        "kind": 5,
+        "importPath": "FAQ.FAQ",
+        "description": "FAQ.FAQ",
+        "peekOfCode": "json_data = json.dumps(template, indent=4, ensure_ascii=False)\nwith open(\"faqs.json\", \"w\", encoding=\"utf-8\") as f:\n    f.write(json_data)\nprint(\"Successful\")",
+        "detail": "FAQ.FAQ",
+        "documentation": {}
+    }
+]

@@ -5,7 +5,7 @@ import os
 dirname = os.path.dirname(__file__)
 
 print(f"Running Dir : {dirname=}")
-excel_file = f"{dirname}\\file-name.xlsx"
+excel_file = f"{dirname}\\Export.xlsx"
 df = pd.read_excel(excel_file, engine="openpyxl")
 
 
@@ -26,7 +26,7 @@ for index_raw, (index, row) in enumerate(df.iterrows()):
 template["CHUNK__"] = list(set(state))
 json_data = json.dumps(template, indent=4, ensure_ascii=False)
 
-with open("faq.json", "w", encoding="utf-8") as f:
+with open("faqs.json", "w", encoding="utf-8") as f:
     f.write(json_data)
 
-print("ok")
+print("Successful")
