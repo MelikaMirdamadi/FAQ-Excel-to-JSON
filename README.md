@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b3382e4ae3dee7c926680007f223a9f2dbe2817d
 ---
 
 # FAQ Excel to JSON Converter
@@ -60,9 +56,4 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-<<<<<<< HEAD
----
-=======
----
 
->>>>>>> b3382e4ae3dee7c926680007f223a9f2dbe2817d
