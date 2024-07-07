@@ -21,7 +21,7 @@ The FAQ Excel to JSON Converter is a Python script designed to automate the conv
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/faq-excel-to-json.git
+    git clone https://github.com/MelikaMirdamadi/faq-excel-to-json.git
     cd faq-excel-to-json
     ```
 
